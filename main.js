@@ -1,8 +1,15 @@
 const canvas = document.getElementById("canvas");
 const context = canvas.getContext("2d");
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+
+function resizeCanvas () 
+{
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+
+resizeCanvas ();
+window.addEventListener ("resize", resizeCanvas);
 
 const SPRITE_WIDTH = 130, SPRITE_HEIGHT = 140;
 const BG_WIDTH = 1025, BG_HEIGHT = 650;
